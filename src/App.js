@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './App.scss';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from 'react-router-dom'
+import {NavHeader} from './Components/NavHeader'
+import {ThisWeek} from './Components/ThisWeek'
+import {Today} from './Components/Today'
+import {AddItem} from './Components/AddItem'
+import {EditItem} from './Components/EditItem'
+
 
 function App() {
   return (
+    <Router>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <React.Fragment>
+        <NavHeader />
+      </React.Fragment>
+      <Switch>
+        <Route path={"/thisweek"} component={ThisWeek} />
+        <Route path={"/today"} component={Today} />
+        <Route path={"/additem"} component={AddItem} />
+        <Route path={"/editItem/:itemId"} component={EditItem} />
+        <Redirect to="/" />
+      </Switch>
     </div>
+  </Router>
   );
 }
 
