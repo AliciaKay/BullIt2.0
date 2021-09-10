@@ -1,3 +1,32 @@
+# Bull-It 2.0
+
+This project is a rebase of an original app created in 2017 for a coding bootcamp project. I will be re-writing it using the following stack:
+
+-Azure Storage or Azure PGSQL
+-Azure Functions
+-Redux/RTK with modern queries
+-React with hooks
+-Bootstrap
+
+As of 9/9, this is still in the discovery phase, with the following articles (among others) as reference:
+
+https://docs.microsoft.com/en-us/learn/modules/build-api-azure-functions
+
+https://docs.microsoft.com/en-us/azure/azure-functions/run-functions-from-deployment-package
+
+
+
+##TO-DO:
+
+1. Create API Function to connect to either my existing PGSQL DB or create a new one using some other AZ relational DB resource 
+2. Configure RTK API slice queries
+3. Design updated wireframes for a refreshed front end
+4. Research and imlplement testing libraries for TDD of the front end
+5. Create front end components to display and edit items
+6. Configure Auth0 for multiple users
+7 and futher - TBD But probably lots
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
